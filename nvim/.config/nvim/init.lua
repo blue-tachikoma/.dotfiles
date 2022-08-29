@@ -259,7 +259,14 @@ nvim_tree_events.subscribe('TreeClose', function()
 end)
 
 -- dashboard setup
-require("dashboard")
+local db = require("dashboard")
+local expand = vim.fn.expand
+db.custom_center = {
+	{icon = '  ',
+	desc = 'Find  File                              ',
+	action = 'Telescope find_files find_command=rg,--hidden,--files',
+	shortcut = 'SPC f f'},
+}
 
 -- gitsigns setup
 require("gitsigns").setup({
@@ -270,8 +277,9 @@ require("gitsigns").setup({
 opt.listchars:append "eol:↴"
 
 require("indent_blankline").setup {
-    show_current_context = true,
-    show_current_context_start = true,
+	show_current_context = true,
+	show_current_context_start = true,
+	filetype_exclude = {'dashboard'}
 }
 
 -- completion related settings
