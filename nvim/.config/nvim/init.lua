@@ -76,6 +76,7 @@ require("packer").startup(function(use)
   use('glepnir/dashboard-nvim')
   use('lewis6991/gitsigns.nvim')
   use('lukas-reineke/indent-blankline.nvim')
+	use('rmagatti/auto-session')
 
   use({
     "hrsh7th/nvim-cmp",
@@ -190,7 +191,8 @@ require("nvim-tree").setup({
 require("lualine").setup {
 	options = {
 		theme = local_onenord
-	}
+	},
+	sections = {lualine_c = {require('auto-session-library').current_session_name}}
 }
 
 -- nvim-treesitter setup
@@ -280,6 +282,17 @@ require("indent_blankline").setup {
 	show_current_context = true,
 	show_current_context_start = true,
 	filetype_exclude = {'dashboard'}
+}
+
+-- auto-session setup
+require("auto-session").setup {
+	log_level = "error",
+	cwd_change_handling = {
+		-- refresh lualine so the new session name is displayed in the status bar
+		post_cwd_changed_hook = function()
+			require("lualine").refresh()
+		end,
+  },
 }
 
 -- completion related settings
