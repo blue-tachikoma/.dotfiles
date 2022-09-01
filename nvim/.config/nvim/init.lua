@@ -109,6 +109,7 @@ map("n", "<A-k>", "<cmd>m .-2<CR>") -- move line up
 -- LSP mappings
 map("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>")
 map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
+map("v", "K", '<Esc><cmd>lua require"metals".type_of_range()<CR>')
 map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
 map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
 map("n", "gds", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
