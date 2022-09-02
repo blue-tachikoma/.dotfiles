@@ -70,13 +70,17 @@ require("packer").startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
-	'romgrk/barbar.nvim',
-	requires = {'kyazdani42/nvim-web-devicons'}
+		'romgrk/barbar.nvim',
+		requires = {'kyazdani42/nvim-web-devicons'}
   }
   use('glepnir/dashboard-nvim')
   use('lewis6991/gitsigns.nvim')
   use('lukas-reineke/indent-blankline.nvim')
 	use('rmagatti/auto-session')
+	use {
+		'folke/trouble.nvim',
+		requires = {'kyazdani42/nvim-web-devicons'}
+	}
 
   use({
     "hrsh7th/nvim-cmp",
@@ -295,6 +299,9 @@ require("auto-session").setup {
 		end,
   },
 }
+
+-- trouble setup
+require("trouble").setup()
 
 -- completion related settings
 -- This is similiar to what I use
