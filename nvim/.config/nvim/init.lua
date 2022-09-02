@@ -81,6 +81,7 @@ require("packer").startup(function(use)
 		'folke/trouble.nvim',
 		requires = {'kyazdani42/nvim-web-devicons'}
 	}
+	use {"ellisonleao/glow.nvim"}
 
   use({
     "hrsh7th/nvim-cmp",
@@ -302,6 +303,9 @@ require("auto-session").setup {
 
 -- trouble setup
 require("trouble").setup()
+
+-- glow setup
+require("glow").setup()
 
 -- completion related settings
 -- This is similiar to what I use
