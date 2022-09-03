@@ -44,6 +44,8 @@
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [trouble](https://github.com/folke/trouble.nvim)
 - [auto-session](https://github.com/rmagatti/auto-session)
+- [lazygit](https://github.com/kdheepak/lazygit.nvim)
+- [comment](https://github.com/numToStr/Comment.nvim)
 - [onenord](https://github.com/rmehri01/onenord.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)

@@ -81,7 +81,9 @@ require("packer").startup(function(use)
 		'folke/trouble.nvim',
 		requires = {'kyazdani42/nvim-web-devicons'}
 	}
-	use {"ellisonleao/glow.nvim"}
+	use('ellisonleao/glow.nvim')
+	use('kdheepak/lazygit.nvim')
+	use('numToStr/Comment.nvim')
 
   use({
     "hrsh7th/nvim-cmp",
@@ -180,6 +182,9 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
 -- NvimTree mappings
 map('n', '<F5>', '<Cmd>NvimTreeToggle<CR>')
+
+-- Lazygit mappings
+map('n', '<leader>gg', '<Cmd>LazyGit<CR>')
 
 -- colorsheme setup
 local colors = require("onenord.colors").load()
@@ -306,6 +311,9 @@ require("trouble").setup()
 
 -- glow setup
 require("glow").setup()
+
+-- comment setup
+require("Comment").setup()
 
 -- completion related settings
 -- This is similiar to what I use
