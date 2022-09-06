@@ -42,6 +42,7 @@ opt.tabstop = 2
 opt.softtabstop = 2 
 opt.smarttab = true
 opt.shiftwidth = 2
+opt.signcolumn = "yes"
 
 ----------------------------------
 -- PLUGINS -----------------------
