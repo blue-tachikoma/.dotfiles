@@ -26,6 +26,7 @@
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [htop](https://htop.dev/)
 - [sdkman](https://sdkman.io/)
+- [spoof-dpi](https://github.com/xvzc/SpoofDPI)
 
 ### Tmux plugins
 
@@ -68,7 +69,7 @@
 - [sdk](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sdk)
 - [sudo](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
 
-## Intallation
+## Installation
 
 ### Stow dotfiles
 
