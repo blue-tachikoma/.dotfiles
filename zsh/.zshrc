@@ -7,12 +7,12 @@ zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # bindings
-bindkey '^B' backward-word							# ctrl + b    | go to word before
-bindkey '^W' forward-word								# ctrl + w    | go to word after
-bindkey '^[^M' autosuggest-execute			# alt + enter | use suggestion from zsh-autosuggestions
-bindkey '^U' backward-kill-line					# ctrl + u    | clear the line before cursor
-bindkey '^X' kill-word									# ctrl + x  	| delete word after
-bindkey -s '^Q' 'source $HOME/.zshrc\n' # ctrl + q		| reload zsh config
+bindkey '^B' backward-word              # ctrl + b    | go to word before
+bindkey '^W' forward-word               # ctrl + w    | go to word after
+bindkey '^[^M' autosuggest-execute      # alt + enter | use suggestion from zsh-autosuggestions
+bindkey '^U' backward-kill-line         # ctrl + u    | clear the line before cursor
+bindkey '^X' kill-word                  # ctrl + x    | delete word after
+bindkey -s '^Q' 'source $HOME/.zshrc\n' # ctrl + q    | reload zsh config
 
 # spoof-dpi
 export PATH=$PATH:~/.spoof-dpi/bin
