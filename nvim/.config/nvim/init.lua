@@ -117,8 +117,18 @@ map("n", "<A-j>", "<cmd>m .+1<CR>") -- move line down
 map("n", "<A-k>", "<cmd>m .-2<CR>") -- move line up
 
 -- LSP mappings
+map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+map("v", "<leader>ca", "<cmd>Lspsaga range_code_action<CR>", { silent = true })
+map("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+map("n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
+map("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+map("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+map("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
+map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 map("n", "gD", "<cmd>lua vim.lsp.buf.definition()<CR>")
-map("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
 map("v", "K", '<Esc><cmd>lua require"metals".type_of_range()<CR>')
 map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
 map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>")
@@ -126,16 +136,12 @@ map("n", "gds", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
 map("n", "gws", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>")
 map("n", "<leader>cl", [[<cmd>lua vim.lsp.codelens.run()<CR>]])
 map("n", "<leader>sh", [[<cmd>lua vim.lsp.buf.signature_help()<CR>]])
-map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>")
 map("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>")
-map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 map("n", "<leader>ws", '<cmd>lua require"metals".hover_worksheet()<CR>')
 map("n", "<leader>aa", [[<cmd>lua vim.diagnostic.setqflist()<CR>]]) -- all workspace diagnostics
 map("n", "<leader>ae", [[<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>]]) -- all workspace errors
 map("n", "<leader>aw", [[<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>]]) -- all workspace warnings
 map("n", "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>") -- buffer diagnostics only
-map("n", "[c", "<cmd>lua vim.diagnostic.goto_prev { wrap = false }<CR>")
-map("n", "]c", "<cmd>lua vim.diagnostic.goto_next { wrap = false }<CR>")
 
 -- Example mappings for usage with nvim-dap. If you don't use that, you can
 -- skip these
