@@ -14,9 +14,6 @@ bindkey '^U' backward-kill-line         # ctrl + u    | clear the line before cu
 bindkey '^X' kill-word                  # ctrl + x    | delete word after
 bindkey -s '^Q' 'source $HOME/.zshrc\n' # ctrl + q    | reload zsh config
 
-# spoof-dpi
-export PATH=$PATH:~/.spoof-dpi/bin
-
 # SDKMAN, must be at the end of the file
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
