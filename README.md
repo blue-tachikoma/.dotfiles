@@ -26,7 +26,6 @@
 - [lazygit](https://github.com/jesseduffield/lazygit)
 - [htop](https://htop.dev/)
 - [sdkman](https://sdkman.io/)
-- [spoof-dpi](https://github.com/xvzc/SpoofDPI)
 
 ### Tmux plugins
 
