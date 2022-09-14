@@ -3,8 +3,7 @@ if not status_ok then
   return
 end
 
-
-opt.listchars:append "eol:↴"
+vim.opt.listchars:append "eol:↴"
 
 indent_blankline.setup {
 	show_current_context = true,
