@@ -33,5 +33,6 @@ opt.showmatch = true                        -- jump to matching bracket briefly
 opt.softtabstop = 2 
 opt.smarttab = true
 
+vim.g.mapleader = " "
 vim.opt_global.completeopt = { "menuone", "noinsert", "noselect" }
 vim.opt_global.shortmess:remove("F"):append("c")
