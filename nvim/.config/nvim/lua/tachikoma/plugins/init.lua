@@ -38,19 +38,6 @@ packer.init {
   },
 }
 
-require("tachikoma.plugins.auto-session")
-require("tachikoma.plugins.bufferline")
-require("tachikoma.plugins.cmp")
-require("tachikoma.plugins.dap")
-require("tachikoma.plugins.dashboard")
-require("tachikoma.plugins.gitsigns")
-require("tachikoma.plugins.indent-blankline")
-require("tachikoma.plugins.lualine")
-require("tachikoma.plugins.metals")
-require("tachikoma.plugins.nvim-tree")
-require("tachikoma.plugins.toggleterm")
-require("tachikoma.plugins.treesitter")
-
 -- Install your plugins here
 return packer.startup(function(use)
   use "wbthomason/packer.nvim"
@@ -72,10 +59,9 @@ return packer.startup(function(use)
   })
 	use { 
     "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = require('lspsaga').init_lsp_saga()
+    branch = "main"
   }
-  use { 'rmehri01/onenord.nvim', config = require("onenord").setup() }
+  use { 'rmehri01/onenord.nvim' }
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -87,14 +73,12 @@ return packer.startup(function(use)
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
   use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    'nvim-treesitter/nvim-treesitter'
   }
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
-    requires = { {'nvim-lua/plenary.nvim'} },
-    config = require("telescope").setup()
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
   use {
 		'romgrk/barbar.nvim',
@@ -106,22 +90,18 @@ return packer.startup(function(use)
 	use('rmagatti/auto-session')
 	use {
 		'folke/trouble.nvim',
-		requires = {'kyazdani42/nvim-web-devicons'},
-    config = require("trouble").setup()
+		requires = {'kyazdani42/nvim-web-devicons'}
 	}
 	use { 
-    'ellisonleao/glow.nvim',
-    config = require("glow").setup()
+    'ellisonleao/glow.nvim'
   }
 	use('kdheepak/lazygit.nvim')
 	use { 
-    'numToStr/Comment.nvim',
-    config = require("Comment").setup()
+    'numToStr/Comment.nvim'
   }
 	use { 
     "akinsho/toggleterm.nvim",
-    tag = '*',
-    config = require("toggleterm").setup()
+    tag = '*'
   }
 
   -- Automatically set up your configuration after cloning packer.nvim

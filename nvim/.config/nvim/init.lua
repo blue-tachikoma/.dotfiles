@@ -23,6 +23,7 @@
 require "tachikoma.options"
 require "tachikoma.keymaps"
 require "tachikoma.plugins"
+require "tachikoma.plugins_setup"
 
 local api = vim.api
 local cmd = vim.cmd
