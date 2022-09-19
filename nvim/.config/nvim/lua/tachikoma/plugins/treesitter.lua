@@ -11,25 +11,7 @@ if not status_ok then
 end
 
 treesitter.setup {
-  ensure_insatlled = { 
-	"scala", 
-	"lua", 
-	"java", 
-	"bash", 
-	"hocon", 
-	"json", 
-	"javascript", 
-	"typescript", 
-	"html", 
-	"css", 
-	"scss", 
-	"python", 
-	"sql", 
-	"yaml", 
-	"proto", 
-	"markdown", 
-	"dockerfile"
-  },
+  ensure_insatlled = "all",
   sync_install = false,
   ignore_install = {""},
   highlight = {
