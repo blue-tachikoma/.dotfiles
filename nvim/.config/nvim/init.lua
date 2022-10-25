@@ -22,7 +22,7 @@
 -------------------------------------------------------------------------------
 require "tachikoma.options"
 require "tachikoma.keymaps"
-require "tachikoma.plugins"
+require "tachikoma.plugins.plugins"
 require "tachikoma.plugins_setup"
 
 local api = vim.api
@@ -46,7 +46,7 @@ map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
 map("v", "<leader>ca", "<cmd>Lspsaga range_code_action<CR>", { silent = true })
 map("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
-map("n", "gd", "<cmd>Lspsaga preview_definition<CR>", { silent = true })
+map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
 map("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
 map("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
 map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
