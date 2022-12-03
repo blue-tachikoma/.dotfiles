@@ -25,6 +25,7 @@
 - [nvim](https://neovim.io/)
 - [htop](https://htop.dev/)
 - [sdkman](https://sdkman.io/)
+- [vifm](https://vifm.info/) with [onedark](https://github.com/vifm/vifm-colors/blob/master/onedark.vifm) theme
 
 ### Tmux plugins
 
