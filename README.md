@@ -23,7 +23,6 @@
 - [zsh](https://www.zsh.org/)
 - [oh-my-szh](https://ohmyz.sh/) with [robbyrussel](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell) theme
 - [nvim](https://neovim.io/)
-- [lazygit](https://github.com/jesseduffield/lazygit)
 - [htop](https://htop.dev/)
 - [sdkman](https://sdkman.io/)
 
@@ -48,6 +47,7 @@
 - [auto-session](https://github.com/rmagatti/auto-session)
 - [lazygit](https://github.com/kdheepak/lazygit.nvim)
 - [comment](https://github.com/numToStr/Comment.nvim)
+- [autopairs](https://github.com/windwp/nvim-autopairs)
 - [onenord](https://github.com/rmehri01/onenord.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
@@ -62,7 +62,6 @@
 - [docker](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker)
 - [docker-compose](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/docker-compose)
 - [dnf](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/dnf)
-- [npm](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/npm)
 - [sbt](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sbt)
 - [scala](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/scala)
 - [sdk](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sdk)
