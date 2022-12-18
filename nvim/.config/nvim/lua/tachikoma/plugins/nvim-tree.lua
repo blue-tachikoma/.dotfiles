@@ -11,6 +11,9 @@ nvim_tree.setup {
   },
   git = {
     ignore = false
+  },
+  filters = {
+    custom = { ".bsp", ".bloop", ".metals", ".idea", ".ammonite", ".DS_Store" }
   }
 }
 
