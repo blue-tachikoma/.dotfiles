@@ -3,6 +3,7 @@ if not status_ok then
   return
 end
 
+func = require("tachikoma.functions")
 
 local metals_config = metals.bare_config()
 
@@ -39,3 +40,5 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
   group = nvim_metals_group,
 })
+
+func.map("n", "<leader>ws", '<cmd>lua require"metals".hover_worksheet()<CR>')
