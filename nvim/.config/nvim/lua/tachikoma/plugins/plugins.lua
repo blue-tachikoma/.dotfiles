@@ -40,29 +40,58 @@ packer.init {
 
 -- Install your plugins here
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim"
+  -- Plugin manager
+  use { "wbthomason/packer.nvim" }
 
-  use { "hrsh7th/nvim-cmp", requires = { { "hrsh7th/cmp-nvim-lsp" }, { "hrsh7th/cmp-vsnip" }, { "hrsh7th/vim-vsnip" } } }
-  use { "scalameta/nvim-metals", requires = { "nvim-lua/plenary.nvim", "mfussenegger/nvim-dap" } }
+  -- General
+  use { "nvim-lua/plenary.nvim" }
+  use { "kyazdani42/nvim-web-devicons" }
+
+  -- Completion
+  use { "hrsh7th/nvim-cmp" }
+  use { "hrsh7th/cmp-nvim-lsp" }
+  use { "hrsh7th/cmp-vsnip" }
+  use { "hrsh7th/vim-vsnip" }
+
+  -- LSP
+  use { "scalameta/nvim-metals" } -- Scala
+  use { "williamboman/mason.nvim" }
+  use { "williamboman/mason-lspconfig.nvim" }
+  use { "neovim/nvim-lspconfig" }
 	use { "glepnir/lspsaga.nvim", branch = "main" }
+	use { "folke/trouble.nvim" }
+
+  -- Debug
+  use { "mfussenegger/nvim-dap" }
+  use { "rcarriga/nvim-dap-ui" }
+
+  -- Theme
   use { "rmehri01/onenord.nvim" }
-  use { "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } }
-  use { "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } }
+
+  -- Syntax highlighting
   use { "nvim-treesitter/nvim-treesitter" }
-  use { "nvim-telescope/telescope.nvim", tag = "0.1.0", requires = { { "nvim-lua/plenary.nvim" } } }
-  use { "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
+
+  -- Visual
+  use { "kyazdani42/nvim-tree.lua" }
+  use { "nvim-lualine/lualine.nvim" }
+  use { "romgrk/barbar.nvim" }
   use { "glepnir/dashboard-nvim" }
+
+  -- Git
   use { "lewis6991/gitsigns.nvim" }
-  use { "lukas-reineke/indent-blankline.nvim" }
-	use { "rmagatti/auto-session" }
-	use { "folke/trouble.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
-	use { "ellisonleao/glow.nvim" }
 	use { "kdheepak/lazygit.nvim" }
+  use { "sindrets/diffview.nvim" }
+
+  -- Edit related
+  use { "lukas-reineke/indent-blankline.nvim" }
 	use { "numToStr/Comment.nvim" }
-	use { "akinsho/toggleterm.nvim", tag = "*" }
   use { "windwp/nvim-autopairs" }
-  use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
-  use { "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }
+
+  -- Misc
+  use { "nvim-telescope/telescope.nvim", tag = "0.1.0" }
+	use { "akinsho/toggleterm.nvim", tag = "*" }
+	use { "rmagatti/auto-session" }
+	use { "ellisonleao/glow.nvim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
