@@ -18,11 +18,6 @@ if not lspconfig_util_status_ok then
   return
 end
 
--- local lspconfig_configs_status_ok, lspconfig_configs = pcall(require, "lspconfig.configs")
--- if not lspconfig_configs_status_ok then
---   return
--- end
-
 mason.setup()
 mason_lspconfig.setup {
   ensure_installed = { "sumneko_lua", "volar" }

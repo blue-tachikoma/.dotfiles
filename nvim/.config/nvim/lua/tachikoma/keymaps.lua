@@ -43,6 +43,9 @@ func.map("n", "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>") -- buffer
 -- Lazygit
 func.map('n', '<leader>gg', '<Cmd>LazyGit<CR>')
 
+-- Dadbod
+func.map('n', '<leader>du', '<cmd>DBUIToggle<CR>')
+
 -- Insert --
 -- Press jk fast to enter
 func.map("i", "jk", "<ESC>", opts)

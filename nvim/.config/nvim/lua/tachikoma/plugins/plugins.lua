@@ -47,6 +47,9 @@ return packer.startup(function(use)
   use { "nvim-lua/plenary.nvim" }
   use { "kyazdani42/nvim-web-devicons" }
 
+  -- Theme
+  use { "rmehri01/onenord.nvim" }
+
   -- Completion
   use { "hrsh7th/nvim-cmp" }
   use { "hrsh7th/cmp-nvim-lsp" }
@@ -65,8 +68,9 @@ return packer.startup(function(use)
   use { "mfussenegger/nvim-dap" }
   use { "rcarriga/nvim-dap-ui" }
 
-  -- Theme
-  use { "rmehri01/onenord.nvim" }
+  -- DB
+  use { 'tpope/vim-dadbod' }
+  use { 'kristijanhusak/vim-dadbod-ui' }
 
   -- Syntax highlighting
   use { "nvim-treesitter/nvim-treesitter" }

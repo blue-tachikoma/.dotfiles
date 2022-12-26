@@ -27,13 +27,6 @@ dap.configurations.scala = {
 
 func.map("n", "<leader>ds", [[<cmd>lua require"dap".continue()<CR>]])
 func.map("n", "<leader>dd", [[<cmd>lua require"dap".disconnect()<CR>]])
-func.map("n", "<leader>dt", [[<cmd>lua require"dap".terminate()<CR>]])
-func.map("n", "<leader>dc", [[<cmd>lua require"dap".close()<CR>]])
-func.map("n", "<leader>dr", [[<cmd>lua require"dap".repl.toggle()<CR>]])
-func.map("n", "<leader>dR", [[<cmd>lua require"dap".repl.close()<CR>]])
 func.map("n", "<leader>dK", [[<cmd>lua require"dap.ui.widgets".hover()<CR>]])
 func.map("n", "<leader>db", [[<cmd>lua require"dap".toggle_breakpoint()<CR>]])
-func.map("n", "<leader>do", [[<cmd>lua require"dap".step_over()<CR>]])
-func.map("n", "<leader>du", [[<cmd>lua require"dap".step_over()<CR>]])
 func.map("n", "<leader>di", [[<cmd>lua require"dap".step_into()<CR>]])
-func.map("n", "<leader>dl", [[<cmd>lua require"dap".run_last()<CR>]])
