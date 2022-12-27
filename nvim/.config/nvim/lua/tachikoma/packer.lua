@@ -1,4 +1,5 @@
 local fn = vim.fn
+local tsFunc = require("tachikoma.functions.treesitter")
 
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
@@ -73,7 +74,7 @@ return packer.startup(function(use)
   use { 'kristijanhusak/vim-dadbod-ui' }
 
   -- Syntax highlighting
-  use { "nvim-treesitter/nvim-treesitter" }
+  use { "nvim-treesitter/nvim-treesitter", run = tsFunc.tsupdate() }
 
   -- Visual
   use { "kyazdani42/nvim-tree.lua" }

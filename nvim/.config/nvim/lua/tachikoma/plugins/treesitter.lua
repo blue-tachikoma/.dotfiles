@@ -1,23 +1,38 @@
-local status_ok, treesitter_install = pcall(require, "nvim-treesitter.install")
-if not status_ok then
-  return
-end
-
-treesitter_install.update({ with_sync = true })
-
 local status_ok, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   return
 end
 
 treesitter.setup {
-  ensure_insatlled = "all",
+  ensure_insatlled = {
+    "bash",
+    "comment",
+    "css",
+    "diff",
+    "dockerfile",
+    "gitattributes",
+    "gitcommit",
+    "gitignore",
+    "hocon",
+    "html",
+    "java",
+    "javascript",
+    "json",
+    "lua",
+    "markdown",
+    "proto",
+    "scala",
+    "scss",
+    "sql",
+    "toml",
+    "typescript",
+    "vim",
+    "vue",
+    "yaml"
+  },
   sync_install = false,
-  ignore_install = {""},
   highlight = {
-    enable = true,
-    disable = {""},
-    additional_vim_regex_highlighting = true
+    enable = true
   },
   indent = { enable = true, disable = {""} }
 }

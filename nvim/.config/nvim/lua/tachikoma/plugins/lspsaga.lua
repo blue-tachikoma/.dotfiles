@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-func = require("tachikoma.functions")
+local func = require("tachikoma.functions.general")
 
 lspsaga.init_lsp_saga()
 

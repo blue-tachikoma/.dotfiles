@@ -1,5 +1,4 @@
-local opts = { noremap = true, silent = true }
-func = require("tachikoma.functions")
+local func = require("tachikoma.functions.general")
 
 -- Modes
 --   normal_mode = "n",
@@ -11,20 +10,20 @@ func = require("tachikoma.functions")
 
 -- Normal --
 -- Better window navigation
-func.map("n", "<C-h>", "<C-w>h", opts)
-func.map("n", "<C-j>", "<C-w>j", opts)
-func.map("n", "<C-k>", "<C-w>k", opts)
-func.map("n", "<C-l>", "<C-w>l", opts)
+func.map("n", "<C-h>", "<C-w>h")
+func.map("n", "<C-j>", "<C-w>j")
+func.map("n", "<C-k>", "<C-w>k")
+func.map("n", "<C-l>", "<C-w>l")
 
 -- Move line up and down
-func.map("n", "<A-j>", ":m .+1<CR>", opts)
-func.map("n", "<A-k>", ":m .-2<CR>", opts)
+func.map("n", "<A-j>", ":m .+1<CR>")
+func.map("n", "<A-k>", ":m .-2<CR>")
 
 -- Resize with arrows
-func.map("n", "<C-Up>", ":resize +2<CR>", opts)
-func.map("n", "<C-Down>", ":resize -2<CR>", opts)
-func.map("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-func.map("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+func.map("n", "<C-Up>", ":resize +2<CR>")
+func.map("n", "<C-Down>", ":resize -2<CR>")
+func.map("n", "<C-Left>", ":vertical resize -2<CR>")
+func.map("n", "<C-Right>", ":vertical resize +2<CR>")
 
 -- Lsp
 func.map("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
@@ -48,24 +47,24 @@ func.map('n', '<leader>du', '<cmd>DBUIToggle<CR>')
 
 -- Insert --
 -- Press jk fast to enter
-func.map("i", "jk", "<ESC>", opts)
+func.map("i", "jk", "<ESC>")
 
 -- Visual --
 -- Stay in indent mode
-func.map("v", "<", "<gv", opts)
-func.map("v", ">", ">gv", opts)
+func.map("v", "<", "<gv")
+func.map("v", ">", ">gv")
 
 -- Move text up and down
-func.map("v", "<A-j>", ":m .+1<CR>==", opts)
-func.map("v", "<A-k>", ":m .-2<CR>==", opts)
+func.map("v", "<A-j>", ":m .+1<CR>==")
+func.map("v", "<A-k>", ":m .-2<CR>==")
 
 -- Hold on to clipboard value
-func.map("v", "p", '"_dP', opts)
+func.map("v", "p", '"_dP')
 
 -- Visual Block --
 -- Move text up and down
-func.map("x", "J", ":move '>+1<CR>gv-gv", opts)
-func.map("x", "K", ":move '<-2<CR>gv-gv", opts)
-func.map("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-func.map("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+func.map("x", "J", ":move '>+1<CR>gv-gv")
+func.map("x", "K", ":move '<-2<CR>gv-gv")
+func.map("x", "<A-j>", ":move '>+1<CR>gv-gv")
+func.map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
