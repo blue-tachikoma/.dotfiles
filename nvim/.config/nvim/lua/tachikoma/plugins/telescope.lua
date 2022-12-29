@@ -11,3 +11,7 @@ func.map("n", "<leader>ff", [[<cmd>lua require"telescope.builtin".find_files()<C
 func.map("n", "<leader>fg", [[<cmd>lua require"telescope.builtin".live_grep()<CR>]])
 func.map("n", "<leader>fb", [[<cmd>lua require"telescope.builtin".buffers()<CR>]])
 func.map("n", "<leader>fh", [[<cmd>lua require"telescope.builtin".help_tags()<CR>]])
+
+-- Extensions mappings
+func.map("n", "<leader>fm", [[<cmd>lua require"telescope".extensions.metals.commands()<CR>]])
+func.map("n", "<leader>fn", [[<cmd>lua require"telescope".extensions.notify.notify()<CR>]])
