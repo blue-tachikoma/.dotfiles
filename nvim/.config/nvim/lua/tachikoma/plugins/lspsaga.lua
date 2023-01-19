@@ -5,7 +5,7 @@ end
 
 local func = require("tachikoma.functions.general")
 
-lspsaga.init_lsp_saga()
+lspsaga.setup()
 
 func.map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 func.map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
