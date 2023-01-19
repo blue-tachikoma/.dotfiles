@@ -61,10 +61,11 @@ func.map("v", "<A-k>", ":m .-2<CR>==")
 -- Hold on to clipboard value
 func.map("v", "p", '"_dP')
 
+-- Lsp
+func.map("v", "K", '<Esc><cmd>lua require"metals".type_of_range()<CR>')
+
 -- Visual Block --
 -- Move text up and down
-func.map("x", "J", ":move '>+1<CR>gv-gv")
-func.map("x", "K", ":move '<-2<CR>gv-gv")
 func.map("x", "<A-j>", ":move '>+1<CR>gv-gv")
 func.map("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
