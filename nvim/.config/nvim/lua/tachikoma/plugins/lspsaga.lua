@@ -5,7 +5,11 @@ end
 
 local func = require("tachikoma.functions.general")
 
-lspsaga.setup()
+lspsaga.setup {
+  symbol_in_winbar = {
+    enable = false,
+  }
+}
 
 func.map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
 func.map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
