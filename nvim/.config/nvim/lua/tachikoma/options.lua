@@ -30,7 +30,7 @@ opt.wrap = false                            -- display lines as one long line
 opt.scrolloff = 8                           -- is one of my fav
 opt.sidescrolloff = 8
 opt.showmatch = true                        -- jump to matching bracket briefly
-opt.softtabstop = 2 
+opt.softtabstop = 2
 opt.smarttab = true
 
 vim.g.mapleader = " "

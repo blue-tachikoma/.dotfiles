@@ -7,40 +7,36 @@ local func = require("tachikoma.functions.general")
 
 bufferline.setup {
   options = {
-    tab_size = 12,
-    max_name_length = 30,
-    mode = "buffers",
+    mode = 'buffers', -- tabs
     offsets = {
       {
-        filetype = "NvimTree",
-        text = "File Explorer",
-        highlight = "Directory",
-        text_align = "center"
-      }
+        text = 'EXPLORER',
+        filetype = 'neo-tree',
+        highlight = 'PanelHeading',
+        text_align = 'left',
+        separator = true,
+      },
+      {
+        text = ' PACKER',
+        filetype = 'packer',
+        highlight = 'PanelHeading',
+        separator = true,
+      },
+      {
+        text = ' DATABASE VIEWER',
+        filetype = 'dbui',
+        highlight = 'PanelHeading',
+        separator = true,
+      },
+      {
+        text = ' DIFF VIEW',
+        filetype = 'DiffviewFiles',
+        highlight = 'PanelHeading',
+        separator = true,
+      },
     },
-    separator_style = "padded_slant",
   }
 }
-
-local nvim_tree_events = require('nvim-tree.events')
-local bufferline_api = require('bufferline.api')
-local nvim_tree_view = require('nvim-tree.view')
-
-local function get_tree_size()
-  return nvim_tree_view.View.width
-end
-
-nvim_tree_events.subscribe('TreeOpen', function()
-  bufferline_api.set_offset(get_tree_size())
-end)
-
-nvim_tree_events.subscribe('Resize', function()
-  bufferline_api.set_offset(get_tree_size())
-end)
-
-nvim_tree_events.subscribe('TreeClose', function()
-  bufferline_api.set_offset(0)
-end)
 
 -- Move to previous/next
 func.map('n', '<A-,>', '<Cmd>BufferPrevious<CR>')
