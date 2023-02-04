@@ -62,8 +62,8 @@ return packer.startup(function(use)
   use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
   use { "neovim/nvim-lspconfig" }
-	use { "glepnir/lspsaga.nvim", branch = "main" }
-	use { "folke/trouble.nvim" }
+  use { "glepnir/lspsaga.nvim", branch = "main" }
+  use { "folke/trouble.nvim" }
 
   -- Debug
   use { "mfussenegger/nvim-dap" }
@@ -77,26 +77,27 @@ return packer.startup(function(use)
   use { "nvim-treesitter/nvim-treesitter", run = tsFunc.tsupdate() }
 
   -- Visual
-  use { "kyazdani42/nvim-tree.lua" }
+  -- use { "kyazdani42/nvim-tree.lua" }
+  use { "nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = { "MunifTanjim/nui.nvim", } }
   use { "nvim-lualine/lualine.nvim" }
   use { "romgrk/barbar.nvim" }
   use { "glepnir/dashboard-nvim" }
 
   -- Git
   use { "lewis6991/gitsigns.nvim" }
-	use { "kdheepak/lazygit.nvim" }
+  use { "kdheepak/lazygit.nvim" }
   use { "sindrets/diffview.nvim" }
 
   -- Edit related
   use { "lukas-reineke/indent-blankline.nvim" }
-	use { "numToStr/Comment.nvim" }
+  use { "numToStr/Comment.nvim" }
   use { "windwp/nvim-autopairs" }
 
   -- Misc
   use { "nvim-telescope/telescope.nvim", tag = "0.1.0" }
-	use { "akinsho/toggleterm.nvim", tag = "*" }
-	use { "rmagatti/auto-session" }
-	use { "ellisonleao/glow.nvim" }
+  use { "akinsho/toggleterm.nvim", tag = "*" }
+  use { "rmagatti/auto-session" }
+  use { "ellisonleao/glow.nvim" }
   use { "rcarriga/nvim-notify" }
 
   -- Automatically set up your configuration after cloning packer.nvim
@@ -105,4 +106,3 @@ return packer.startup(function(use)
     require("packer").sync()
   end
 end)
-
