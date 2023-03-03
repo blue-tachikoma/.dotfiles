@@ -20,6 +20,7 @@ treesitter.setup {
     "json",
     "lua",
     "markdown",
+    "markdown_inline",
     "proto",
     "scala",
     "scss",

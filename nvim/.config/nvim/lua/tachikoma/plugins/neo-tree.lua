@@ -63,5 +63,5 @@ neo_tree.setup {
   }
 }
 
-func.map('n', '<F4>', '<Cmd>Neotree reveal<CR>')
+func.map('n', '<F4>', '<Cmd>Neotree toggle<CR>')
 func.map('n', '<F5>', '<Cmd>Neotree<CR>')

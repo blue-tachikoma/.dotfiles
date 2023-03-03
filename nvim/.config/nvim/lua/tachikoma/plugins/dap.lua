@@ -12,7 +12,7 @@ dap.configurations.scala = {
     name = "RunOrTest",
     metals = {
       runType = "runOrTestFile",
-      args = { "server", "-f" }, -- here just as an example
+      args = { "server" }, -- here just as an example
     },
   },
   {
