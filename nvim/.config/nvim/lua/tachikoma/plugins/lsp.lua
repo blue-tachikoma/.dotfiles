@@ -20,11 +20,11 @@ end
 
 mason.setup()
 mason_lspconfig.setup {
-  ensure_installed = { "sumneko_lua", "volar" }
+  ensure_installed = { "lua_ls", "volar" }
 }
 
 -- Lua
-lspconfig.sumneko_lua.setup {}
+lspconfig.lua_ls.setup {}
 
 -- Vue
 lspconfig.volar.setup {
