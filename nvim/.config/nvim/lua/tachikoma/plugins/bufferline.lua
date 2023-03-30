@@ -6,37 +6,44 @@ end
 local func = require("tachikoma.functions.general")
 
 bufferline.setup {
-  options = {
-    mode = 'buffers', -- tabs
-    offsets = {
-      {
-        text = 'EXPLORER',
-        filetype = 'neo-tree',
-        highlight = 'PanelHeading',
-        text_align = 'left',
-        separator = true,
-      },
-      {
-        text = ' PACKER',
-        filetype = 'packer',
-        highlight = 'PanelHeading',
-        separator = true,
-      },
-      {
-        text = ' DATABASE VIEWER',
-        filetype = 'dbui',
-        highlight = 'PanelHeading',
-        separator = true,
-      },
-      {
-        text = ' DIFF VIEW',
-        filetype = 'DiffviewFiles',
-        highlight = 'PanelHeading',
-        separator = true,
-      },
-    },
-  }
+  animation = true
 }
+
+local api_status_ok, bufferline_api = pcall(require, "bufferline.api")
+if not api_status_ok then
+  return
+end
+
+-- FileTree offset
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function(tbl)
+    local set_offset = bufferline_api.set_offset
+
+    local bufwinid
+    local last_width
+    local autocmd = vim.api.nvim_create_autocmd('WinScrolled', {
+      callback = function()
+        bufwinid = bufwinid or vim.fn.bufwinid(tbl.buf)
+
+        local width = vim.api.nvim_win_get_width(bufwinid)
+        if width ~= last_width then
+          set_offset(width, 'FileTree')
+          last_width = width
+        end
+      end,
+    })
+
+    vim.api.nvim_create_autocmd('BufWipeout', {
+      buffer = tbl.buf,
+      callback = function()
+        vim.api.nvim_del_autocmd(autocmd)
+        set_offset(0)
+      end,
+      once = true,
+    })
+  end,
+  pattern = 'neo-tree', -- or any other filetree's `ft`
+})
 
 -- Move to previous/next
 func.map('n', '<A-,>', '<Cmd>BufferPrevious<CR>')
