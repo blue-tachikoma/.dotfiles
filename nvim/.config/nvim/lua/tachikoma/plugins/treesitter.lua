@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 treesitter.setup {
-  ensure_insatlled = {
+  ensure_installed = {
     "bash",
     "comment",
     "css",
