@@ -94,7 +94,7 @@ return packer.startup(function(use)
   use { "windwp/nvim-autopairs" }
 
   -- Misc
-  use { "nvim-telescope/telescope.nvim", tag = "0.1.0" }
+  use { "nvim-telescope/telescope.nvim", tag = "0.1.1" }
   use { "akinsho/toggleterm.nvim", tag = "*" }
   use { "rmagatti/auto-session" }
   use { "ellisonleao/glow.nvim" }
