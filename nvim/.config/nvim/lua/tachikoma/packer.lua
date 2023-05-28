@@ -3,6 +3,7 @@ local tsFunc = require("tachikoma.functions.treesitter")
 
 -- Set neo-tree highlighting group before plugin init
 vim.api.nvim_set_hl(0, 'NeoTreeNormal', { fg="#c8d0e0", bg="#2e3440" })
+vim.api.nvim_set_hl(0, 'NeoTreeNormalNC', { fg="#c8d0e0", bg="#2e3440" })
 
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
