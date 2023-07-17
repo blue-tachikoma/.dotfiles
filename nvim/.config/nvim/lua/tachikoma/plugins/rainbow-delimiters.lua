@@ -41,4 +41,3 @@ rainbow_delimiters_setup {
     'RainbowDelimiterCyan',
   },
 }
-
