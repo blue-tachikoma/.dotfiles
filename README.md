@@ -87,5 +87,5 @@ $ git clone https://github.com/blue-tachikoma/.dotfiles.git
 
 ```console
 $ cd .dotfiles/
-$ stow --no-folding -vt ~ *
+$ stow -vt ~ *
 ```
