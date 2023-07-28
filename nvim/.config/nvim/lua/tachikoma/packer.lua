@@ -51,6 +51,7 @@ return packer.startup(function(use)
   -- General
   use { "nvim-lua/plenary.nvim" }
   use { "kyazdani42/nvim-web-devicons" }
+  use { "MunifTanjim/nui.nvim" }
 
   -- Theme
   use { "rmehri01/onenord.nvim" }
@@ -81,8 +82,7 @@ return packer.startup(function(use)
   use { "nvim-treesitter/nvim-treesitter", run = tsFunc.tsupdate() }
 
   -- Visual
-  -- use { "kyazdani42/nvim-tree.lua" }
-  use { "nvim-neo-tree/neo-tree.nvim", branch = "v2.x", requires = { "MunifTanjim/nui.nvim", } }
+  use { "nvim-neo-tree/neo-tree.nvim", branch = "v2.x" }
   use { "nvim-lualine/lualine.nvim" }
   use { "romgrk/barbar.nvim" }
   use { "glepnir/dashboard-nvim" }
@@ -104,6 +104,7 @@ return packer.startup(function(use)
   use { "ellisonleao/glow.nvim" }
   use { "rcarriga/nvim-notify" }
   use { "HiPhish/rainbow-delimiters.nvim" }
+  use { "ggandor/leap.nvim" }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
