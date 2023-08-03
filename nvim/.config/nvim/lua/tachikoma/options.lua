@@ -32,6 +32,7 @@ opt.sidescrolloff = 8
 opt.showmatch = true                        -- jump to matching bracket briefly
 opt.softtabstop = 2
 opt.smarttab = true
+opt.termguicolors = true
 
 vim.g.mapleader = " "
 vim.opt_global.completeopt = { "menuone", "noinsert", "noselect" }
