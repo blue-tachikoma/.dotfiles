@@ -10,13 +10,13 @@ vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
 -- Icons for diagnostic errors
 vim.fn.sign_define("DiagnosticSignError",
-  {text = " ", texthl = "DiagnosticSignError"})
+  { text = " ", texthl = "DiagnosticSignError" })
 vim.fn.sign_define("DiagnosticSignWarn",
-  {text = " ", texthl = "DiagnosticSignWarn"})
+  { text = " ", texthl = "DiagnosticSignWarn" })
 vim.fn.sign_define("DiagnosticSignInfo",
-  {text = " ", texthl = "DiagnosticSignInfo"})
+  { text = " ", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignHint",
-  {text = "", texthl = "DiagnosticSignHint"})
+  { text = "", texthl = "DiagnosticSignHint" })
 
 neo_tree.setup {
   window = {
@@ -28,8 +28,8 @@ neo_tree.setup {
     },
     mappings = {
       ["<space>"] = {
-          "toggle_node",
-          nowait = true,
+        "toggle_node",
+        nowait = true,
       }
     }
   },
@@ -37,7 +37,7 @@ neo_tree.setup {
     filtered_items = {
       visible = true, -- when true, they will just be displayed differently than normal items
       hide_dotfiles = false,
-      hide_gitignored = true,
+      hide_gitignored = false,
       hide_by_name = {
         -- "node_modules"
       },
@@ -53,7 +53,6 @@ neo_tree.setup {
         ".idea",
         ".bsp",
         ".bloop",
-        ".metals",
         "metals.sbt"
       },
       never_show_by_pattern = { -- uses glob style patterns
