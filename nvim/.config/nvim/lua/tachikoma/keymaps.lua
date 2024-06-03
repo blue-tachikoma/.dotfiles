@@ -33,6 +33,7 @@ func.map("n", "gds", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
 func.map("n", "gws", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>")
 func.map("n", "<leader>cl", [[<cmd>lua vim.lsp.codelens.run()<CR>]])
 func.map("n", "<leader>sh", [[<cmd>lua vim.lsp.buf.signature_help()<CR>]])
+func.map("n", "<leader>h", [[<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), nil)<CR>]])
 func.map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format{async = true}<CR>")
 func.map("n", "<leader>aa", [[<cmd>lua vim.diagnostic.setqflist()<CR>]]) -- all workspace diagnostics
 func.map("n", "<leader>ae", [[<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>]]) -- all workspace errors
