@@ -69,6 +69,7 @@ return packer.startup(function(use)
   use { "neovim/nvim-lspconfig" }
   use { "glepnir/lspsaga.nvim", branch = "main" }
   use { "folke/trouble.nvim" }
+  use { "j-hui/fidget.nvim", tag = "v1.4.5" }
 
   -- Debug
   use { "mfussenegger/nvim-dap" }
