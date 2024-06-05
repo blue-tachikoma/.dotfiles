@@ -1,26 +1,32 @@
-require("tachikoma.plugins.auto-session")
-require("tachikoma.plugins.bufferline")
-require("tachikoma.plugins.cmp")
-require("tachikoma.plugins.dap")
-require("tachikoma.plugins.dap-ui")
-require("tachikoma.plugins.dashboard")
-require("tachikoma.plugins.gitsigns")
-require("tachikoma.plugins.indent-blankline")
-require("tachikoma.plugins.lualine")
-require("tachikoma.plugins.metals")
-require("tachikoma.plugins.neo-tree")
-require("tachikoma.plugins.toggleterm")
-require("tachikoma.plugins.treesitter")
-require("tachikoma.plugins.comment")
-require("tachikoma.plugins.glow")
-require("tachikoma.plugins.lspsaga")
-require("tachikoma.plugins.onenord")
-require("tachikoma.plugins.telescope")
-require("tachikoma.plugins.trouble")
-require("tachikoma.plugins.autopairs")
-require("tachikoma.plugins.diffview")
-require("tachikoma.plugins.lsp")
-require("tachikoma.plugins.notify")
-require("tachikoma.plugins.fidget")
-require("tachikoma.plugins.rainbow-delimiters")
-require("tachikoma.plugins.leap")
+return {
+  -- General
+  "nvim-lua/plenary.nvim",
+  "nvim-tree/nvim-web-devicons",
+  "MunifTanjim/nui.nvim",
+
+  -- LSP
+  { "folke/trouble.nvim", cmd = "Trouble" },
+  { "j-hui/fidget.nvim", version = "v1.4.5", config = true },
+
+  -- Debug
+  { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+
+  -- DB
+  'tpope/vim-dadbod',
+  'kristijanhusak/vim-dadbod-ui',
+
+  -- Visual
+  "romgrk/barbar.nvim",
+
+  -- Git
+  "kdheepak/lazygit.nvim",
+  "sindrets/diffview.nvim",
+
+  -- Edit related
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
+  { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
+
+  -- Misc
+  { 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
+  { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
+}

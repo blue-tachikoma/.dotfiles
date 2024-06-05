@@ -1,6 +1,10 @@
-local status_ok, leap = pcall(require, "leap")
-if not status_ok then
-  return
-end
-
-leap.set_default_keymaps()
+return {
+  "ggandor/leap.nvim",
+    lazy = false,
+    config = function()
+      require('leap').create_default_mappings()
+      vim.keymap.set({'n', 'x', 'o'}, 's',  '<Plug>(leap-forward)')
+      vim.keymap.set({'n', 'x', 'o'}, 'S',  '<Plug>(leap-backward)')
+      vim.keymap.set({'n', 'x', 'o'}, 'gs', '<Plug>(leap-from-window)')
+    end,
+}

@@ -40,6 +40,45 @@ func.map("n", "<leader>ae", [[<cmd>lua vim.diagnostic.setqflist({severity = "E"}
 func.map("n", "<leader>aw", [[<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>]]) -- all workspace warnings
 func.map("n", "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>") -- buffer diagnostics only
 
+-- Telescope
+func.map("n", "<leader>ff", [[<cmd>lua require"telescope.builtin".find_files()<CR>]])
+func.map("n", "<leader>fg", [[<cmd>lua require"telescope.builtin".live_grep()<CR>]])
+func.map("n", "<leader>fb", [[<cmd>lua require"telescope.builtin".buffers()<CR>]])
+func.map("n", "<leader>fh", [[<cmd>lua require"telescope.builtin".help_tags()<CR>]])
+func.map("n", "<leader>fd",
+  [[<cmd>lua require"telescope.builtin".find_files({ search_dirs = { vim.fn.getcwd() .. '/.metals/readonly/dependencies'} })<CR>]])
+func.map("n", "<leader>fj",
+  [[<cmd>lua require"telescope.builtin".live_grep({ search_dirs = { vim.fn.getcwd() .. '/.metals/readonly/dependencies'} })<CR>]])
+func.map("n", "<leader>fm", [[<cmd>lua require"telescope".extensions.metals.commands()<CR>]])
+func.map("n", "<leader>fn", [[<cmd>lua require"telescope".extensions.notify.notify()<CR>]])
+
+-- Lspsaga
+func.map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
+func.map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
+func.map("v", "<leader>ca", "<cmd>Lspsaga range_code_action<CR>", { silent = true })
+func.map("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
+func.map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
+func.map("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
+func.map("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
+func.map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
+func.map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
+func.map("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
+func.map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
+
+-- Dapui
+func.map("n", "<leader>dp", [[<cmd>lua require"dapui".toggle()<CR>]])
+
+-- Dap
+func.map("n", "<leader>ds", [[<cmd>lua require"dap".continue()<CR>]])
+func.map("n", "<leader>dd", [[<cmd>lua require"dap".disconnect()<CR>]])
+func.map("n", "<leader>dK", [[<cmd>lua require"dap.ui.widgets".hover()<CR>]])
+func.map("n", "<leader>db", [[<cmd>lua require"dap".toggle_breakpoint()<CR>]])
+func.map("n", "<leader>di", [[<cmd>lua require"dap".step_into()<CR>]])
+
+-- Diffview
+func.map("n", "<F2>", [[<cmd>DiffviewOpen<CR>]])
+func.map("n", "<F3>", [[<cmd>DiffviewClose<CR>]])
+
 -- Lazygit
 func.map('n', '<leader>gg', '<Cmd>LazyGit<CR>')
 

@@ -1,11 +1,12 @@
-local status_ok, lualine = pcall(require, "lualine")
-if not status_ok then
-  return
-end
-
-local local_onenord = require('lualine.themes.onenord')
-lualine.setup {
-	options = {
-		theme = local_onenord,
-	}
+return {
+  "nvim-lualine/lualine.nvim",
+  config = function ()
+    local lualine = require("lualine")
+    local local_onenord = require('lualine.themes.onenord')
+    lualine.setup {
+      options = {
+        theme = local_onenord,
+      }
+    }
+  end,
 }
