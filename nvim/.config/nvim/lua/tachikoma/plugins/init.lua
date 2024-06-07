@@ -15,15 +15,12 @@ return {
   'tpope/vim-dadbod',
   'kristijanhusak/vim-dadbod-ui',
 
-  -- Visual
-  "romgrk/barbar.nvim",
-
   -- Git
   "kdheepak/lazygit.nvim",
   "sindrets/diffview.nvim",
 
   -- Edit related
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
+  { "lukas-reineke/indent-blankline.nvim", main = "ibl", config = true },
   { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
 
   -- Misc
