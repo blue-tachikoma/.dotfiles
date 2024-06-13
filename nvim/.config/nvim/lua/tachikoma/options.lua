@@ -35,4 +35,4 @@ opt.smarttab = true
 opt.termguicolors = true
 
 vim.g.mapleader = " "
-vim.opt_global.completeopt = { "menuone", "noinsert", "noselect" }
+vim.opt_global.completeopt = { "menu", "menuone", "noinsert", "noselect" }

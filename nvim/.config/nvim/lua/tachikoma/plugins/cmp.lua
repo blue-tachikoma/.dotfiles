@@ -19,6 +19,21 @@ return {
           vim.fn["vsnip#anonymous"](args.body)
         end,
       },
+      sorting = {
+        comparators = {
+          cmp.config.compare.exact,
+          cmp.config.compare.offset,
+          cmp.config.compare.score,
+          cmp.config.compare.recently_used,
+          cmp.config.compare.scopes,
+          cmp.config.compare.locality,
+          cmp.config.compare.length,
+          cmp.config.compare.sort_text,
+          cmp.config.compare.kind,
+          cmp.config.compare.order,
+        }
+      },
+      preselect = cmp.PreselectMode.None,
       mapping = cmp.mapping.preset.insert {
         -- None of this made sense to me when first looking into this since there
         -- is no vim docs, but you can't have select = true here _unless_ you are
