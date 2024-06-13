@@ -14,9 +14,13 @@ bindkey '^U' backward-kill-line         # ctrl + u    | clear the line before cu
 bindkey '^X' kill-word                  # ctrl + x    | delete word after
 bindkey -s '^Q' 'source $HOME/.zshrc\n' # ctrl + q    | reload zsh config
 
-# >>> coursier install directory >>>
+# nvm directory
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# coursier install directory
 export PATH="$PATH:$HOME/.local/share/coursier/bin"
-# <<< coursier install directory <<<
 
 # SDKMAN, must be at the end of the file
 export SDKMAN_DIR="$HOME/.sdkman"
