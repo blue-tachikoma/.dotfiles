@@ -65,9 +65,6 @@ func.map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
 func.map("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
 func.map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
 
--- Dapui
-func.map("n", "<leader>dp", [[<cmd>lua require"dapui".toggle()<CR>]])
-
 -- Dap
 func.map("n", "<leader>ds", [[<cmd>lua require"dap".continue()<CR>]])
 func.map("n", "<leader>dd", [[<cmd>lua require"dap".disconnect()<CR>]])
