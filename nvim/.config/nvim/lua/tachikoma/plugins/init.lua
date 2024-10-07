@@ -7,9 +7,6 @@ return {
   -- LSP
   { "j-hui/fidget.nvim", version = "v1.4.5", config = true },
 
-  -- Debug
-  { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
-
   -- DB
   'tpope/vim-dadbod',
   'kristijanhusak/vim-dadbod-ui',
