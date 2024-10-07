@@ -5,7 +5,6 @@ return {
   "MunifTanjim/nui.nvim",
 
   -- LSP
-  { "folke/trouble.nvim", cmd = "Trouble" },
   { "j-hui/fidget.nvim", version = "v1.4.5", config = true },
 
   -- Debug
