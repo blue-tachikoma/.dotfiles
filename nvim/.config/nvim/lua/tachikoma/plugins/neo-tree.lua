@@ -41,6 +41,17 @@ return {
           }
         }
       },
+      default_component_configs = {
+        type = {
+          enabled = false,
+        },
+        last_modified = {
+          enabled = false,
+        },
+        created = {
+          enabled = false,
+        },
+      },
       filesystem = {
         filtered_items = {
           visible = true, -- when true, they will just be displayed differently than normal items
