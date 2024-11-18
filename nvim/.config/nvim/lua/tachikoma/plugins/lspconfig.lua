@@ -5,7 +5,7 @@ return {
     "williamboman/mason-lspconfig",
     "hrsh7th/cmp-nvim-lsp",
   },
-  config = function ()
+  config = function()
     require("mason")
     require("mason-lspconfig")
     local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -13,5 +13,7 @@ return {
     require("lspconfig").lua_ls.setup {
       capabilities = lsp_capabilities
     }
+    require("lspconfig").ts_ls.setup {}
+    require("lspconfig").bashls.setup {}
   end,
 }
