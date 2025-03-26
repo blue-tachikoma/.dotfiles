@@ -4,9 +4,6 @@ return {
   "nvim-tree/nvim-web-devicons",
   "MunifTanjim/nui.nvim",
 
-  -- LSP
-  { "j-hui/fidget.nvim", version = "v1.4.5", config = true },
-
   -- DB
   'tpope/vim-dadbod',
   'kristijanhusak/vim-dadbod-ui',
