@@ -29,7 +29,7 @@ return {
     require("neo-tree").setup {
       window = {
         position = "left",
-        width = 40,
+        width = 65,
         mapping_options = {
           noremap = true,
           nowait = true,
