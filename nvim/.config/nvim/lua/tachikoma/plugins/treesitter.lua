@@ -1,46 +1,38 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ':TSUpdate',
-  dependencies = {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-  },
+  branch = 'main',
+  lazy = false,
   config = function ()
-    local configs = require("nvim-treesitter.configs")
+    require('nvim-treesitter').setup()
 
-    configs.setup({
-        ensure_installed = {
-          "bash",
-          "comment",
-          "css",
-          "diff",
-          "dockerfile",
-          "gitattributes",
-          "gitcommit",
-          "gitignore",
-          "hocon",
-          "html",
-          "java",
-          "javascript",
-          "json",
-          "lua",
-          "markdown",
-          "markdown_inline",
-          "proto",
-          "scala",
-          "scss",
-          "sql",
-          "toml",
-          "typescript",
-          "vim",
-          "vue",
-          "yaml"
-        },
-        auto_install = true,
-        sync_install = false,
-        highlight = {
-          enable = true
-        },
-        indent = { enable = true, disable = {""} }
-      })
+    local ensure_installed = {
+      "bash",
+      "comment",
+      "css",
+      "diff",
+      "dockerfile",
+      "gitattributes",
+      "gitcommit",
+      "gitignore",
+      "hocon",
+      "html",
+      "java",
+      "javascript",
+      "json",
+      "lua",
+      "markdown",
+      "markdown_inline",
+      "proto",
+      "scala",
+      "scss",
+      "sql",
+      "toml",
+      "typescript",
+      "vim",
+      "vue",
+      "yaml"
+    }
+    require('nvim-treesitter').install(ensure_installed)
   end,
 }
