@@ -38,7 +38,8 @@ return {
           ["<space>"] = {
             "toggle_node",
             nowait = true,
-          }
+          },
+          ["O"] = "expand_all_subnodes"
         }
       },
       default_component_configs = {
@@ -71,6 +72,9 @@ return {
             ".DS_Store",
             ".idea",
             ".bsp",
+            ".bazelbsp",
+            ".metals",
+            ".vscode",
             ".bloop",
             "metals.sbt"
           },

@@ -17,6 +17,5 @@ return {
   { 'windwp/nvim-autopairs', event = "InsertEnter", config = true },
 
   -- Misc
-  { 'nvim-telescope/telescope.nvim', tag = '0.1.6', dependencies = { 'nvim-lua/plenary.nvim' } },
   { "ellisonleao/glow.nvim", config = true, cmd = "Glow" },
 }

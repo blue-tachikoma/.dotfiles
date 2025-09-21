@@ -1,10 +1,13 @@
 return {
   "scalameta/nvim-metals",
   dependencies = {
-    "mfussenegger/nvim-dap"
+    "mfussenegger/nvim-dap",
+    "nvim-lua/plenary.nvim",
   },
-  config = function()
+  ft = { "scala", "sbt", "java" },
+  opts = function()
     local metals = require("metals")
+    local metals_config = metals.bare_config()
 
     local function metals_status_handler(err, status, ctx)
       local val = {}
@@ -23,8 +26,6 @@ return {
       vim.lsp.handlers["$/progress"](err, msg, ctx)
     end
 
-    local metals_config = metals.bare_config()
-
     metals_config.settings = {
       showImplicitArguments = true,
       showImplicitConversionsAndClasses = true,
@@ -39,14 +40,23 @@ return {
       metals.setup_dap()
     end
 
-    -- Autocmd that will actually be in charging of starting the whole thing
+    return metals_config
+  end,
+  config = function(self, metals_config)
     local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
     vim.api.nvim_create_autocmd("FileType", {
-      pattern = { "scala", "sbt", "java" },
+      pattern = self.ft,
       callback = function()
-        metals.initialize_or_attach(metals_config)
+        require("metals").initialize_or_attach(metals_config)
       end,
       group = nvim_metals_group,
     })
-  end
+  end,
+  keys = {
+    {
+      "<leader>fm",
+      function() require("metals").commands() end,
+      desc = "Metals commands picker",
+    }
+  },
 }

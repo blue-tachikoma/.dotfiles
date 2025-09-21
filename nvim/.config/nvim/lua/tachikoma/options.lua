@@ -34,5 +34,9 @@ opt.softtabstop = 2
 opt.smarttab = true
 opt.termguicolors = true
 
+vim.diagnostic.config({
+  virtual_lines = true,
+  virtual_text = false
+})
 vim.g.mapleader = " "
 vim.opt_global.completeopt = { "menu", "menuone", "noinsert", "noselect" }

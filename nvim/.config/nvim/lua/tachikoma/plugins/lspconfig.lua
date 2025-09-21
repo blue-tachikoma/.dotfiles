@@ -10,10 +10,11 @@ return {
     require("mason-lspconfig")
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
-    require("lspconfig").lua_ls.setup {
+    vim.lsp.config('lua_ls', {
       capabilities = lsp_capabilities
-    }
-    require("lspconfig").ts_ls.setup {}
-    require("lspconfig").bashls.setup {}
+    })
+    vim.lsp.enable('lua_ls')
+    vim.lsp.enable('ts_ls')
+    vim.lsp.enable('bash_ls')
   end,
 }
