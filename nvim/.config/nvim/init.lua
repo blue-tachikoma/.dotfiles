@@ -1,5 +1,6 @@
 require "tachikoma.options"
 require "tachikoma.keymaps"
+require "tachikoma.autocmds"
 
 local fn = vim.fn
 
