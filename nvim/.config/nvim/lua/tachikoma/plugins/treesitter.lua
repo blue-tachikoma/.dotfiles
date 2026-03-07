@@ -29,6 +29,7 @@ return {
       "sql",
       "toml",
       "typescript",
+      "typespec",
       "vim",
       "vue",
       "yaml"
