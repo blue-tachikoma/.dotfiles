@@ -27,6 +27,7 @@ return {
     end
 
     metals_config.settings = {
+      serverVersion = "1.6.5",
       showImplicitArguments = true,
       showImplicitConversionsAndClasses = true,
       showInferredType = true
