@@ -3,9 +3,14 @@ return {
   dependencies = {
     "mfussenegger/nvim-dap",
     "nvim-lua/plenary.nvim",
+    "hrsh7th/cmp-nvim-lsp",
   },
   ft = { "scala", "sbt", "java" },
   opts = function()
+    if vim.fn.executable("cs") == 0 and vim.fn.executable("coursier") == 0 then
+      vim.notify("Metals requires Coursier. Install it before opening Scala, SBT, or Java files.", vim.log.levels.WARN)
+    end
+
     local metals = require("metals")
     local metals_config = metals.bare_config()
 
@@ -27,7 +32,7 @@ return {
     end
 
     metals_config.settings = {
-      serverVersion = "1.6.5",
+      serverVersion = "1.6.8",
       showImplicitArguments = true,
       showImplicitConversionsAndClasses = true,
       showInferredType = true
@@ -58,6 +63,12 @@ return {
       "<leader>fm",
       function() require("metals").commands() end,
       desc = "Metals commands picker",
-    }
+    },
+    {
+      "K",
+      function() require("metals").type_of_range() end,
+      mode = "v",
+      desc = "Metals type of range",
+    },
   },
 }

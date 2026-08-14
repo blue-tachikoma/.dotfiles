@@ -19,12 +19,17 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     "--branch=stable", -- latest stable release
     lazypath,
   })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({ { "Failed to clone lazy.nvim. Check network access and Git.", "ErrorMsg" } }, true, {})
+    return
+  end
 end
 vim.opt.rtp:prepend(lazypath)
 
 -- Use a protected call so we don't error out on first use
 local status_ok, lazy = pcall(require, "lazy")
 if not status_ok then
+  vim.notify("lazy.nvim could not be loaded", vim.log.levels.ERROR)
   return
 end
 

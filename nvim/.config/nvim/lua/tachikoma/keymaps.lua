@@ -25,50 +25,11 @@ func.map("n", "<C-Down>", ":resize -2<CR>")
 func.map("n", "<C-Left>", ":vertical resize -2<CR>")
 func.map("n", "<C-Right>", ":vertical resize +2<CR>")
 
--- Lsp
-func.map("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<CR>")
-func.map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-func.map("n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<CR>")
-func.map("n", "gds", "<cmd>lua vim.lsp.buf.document_symbol()<CR>")
-func.map("n", "gws", "<cmd>lua vim.lsp.buf.workspace_symbol()<CR>")
-func.map("n", "<leader>cl", [[<cmd>lua vim.lsp.codelens.run()<CR>]])
-func.map("n", "<leader>sh", [[<cmd>lua vim.lsp.buf.signature_help()<CR>]])
-func.map("n", "<leader>h", [[<cmd>lua vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled(), nil)<CR>]])
-func.map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format{async = true}<CR>")
+-- Diagnostics
 func.map("n", "<leader>aa", [[<cmd>lua vim.diagnostic.setqflist()<CR>]]) -- all workspace diagnostics
 func.map("n", "<leader>ae", [[<cmd>lua vim.diagnostic.setqflist({severity = "E"})<CR>]]) -- all workspace errors
 func.map("n", "<leader>aw", [[<cmd>lua vim.diagnostic.setqflist({severity = "W"})<CR>]]) -- all workspace warnings
 func.map("n", "<leader>d", "<cmd>lua vim.diagnostic.setloclist()<CR>") -- buffer diagnostics only
-
--- Lspsaga
-func.map("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { silent = true })
-func.map("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", { silent = true })
-func.map("v", "<leader>ca", "<cmd>Lspsaga range_code_action<CR>", { silent = true })
-func.map("n", "gr", "<cmd>Lspsaga rename<CR>", { silent = true })
-func.map("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { silent = true })
-func.map("n", "<leader>cd", "<cmd>Lspsaga show_line_diagnostics<CR>", { silent = true })
-func.map("n", "<leader>cd", "<cmd>Lspsaga show_cursor_diagnostics<CR>", { silent = true })
-func.map("n", "[e", "<cmd>Lspsaga diagnostic_jump_prev<CR>", { silent = true })
-func.map("n", "]e", "<cmd>Lspsaga diagnostic_jump_next<CR>", { silent = true })
-func.map("n","<leader>o", "<cmd>LSoutlineToggle<CR>",{ silent = true })
-func.map("n", "K", "<cmd>Lspsaga hover_doc<CR>", { silent = true })
-
--- Dap
-func.map("n", "<leader>ds", [[<cmd>lua require"dap".continue()<CR>]])
-func.map("n", "<leader>dd", [[<cmd>lua require"dap".disconnect()<CR>]])
-func.map("n", "<leader>dK", [[<cmd>lua require"dap.ui.widgets".hover()<CR>]])
-func.map("n", "<leader>db", [[<cmd>lua require"dap".toggle_breakpoint()<CR>]])
-func.map("n", "<leader>di", [[<cmd>lua require"dap".step_into()<CR>]])
-
--- Diffview
-func.map("n", "<F2>", [[<cmd>DiffviewOpen<CR>]])
-func.map("n", "<F3>", [[<cmd>DiffviewClose<CR>]])
-
--- Lazygit
-func.map('n', '<leader>gg', '<Cmd>LazyGit<CR>')
-
--- Dadbod
-func.map('n', '<leader>du', '<cmd>DBUIToggle<CR>')
 
 -- Insert --
 -- Press jk fast to enter
@@ -86,11 +47,7 @@ func.map("v", "<A-k>", ":m .-2<CR>==")
 -- Hold on to clipboard value
 func.map("v", "p", '"_dP')
 
--- Lsp
-func.map("v", "K", '<Esc><cmd>lua require"metals".type_of_range()<CR>')
-
 -- Visual Block --
 -- Move text up and down
 func.map("x", "<A-j>", ":move '>+1<CR>gv-gv")
 func.map("x", "<A-k>", ":move '<-2<CR>gv-gv")
-

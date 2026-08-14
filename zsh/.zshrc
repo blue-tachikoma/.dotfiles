@@ -1,7 +1,7 @@
 # oh-my-zsh 
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="robbyrussell"
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose dnf npm sbt scala sdk sudo)
+plugins=(git zsh-autosuggestions docker docker-compose dnf npm sbt scala sdk sudo zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
@@ -21,6 +21,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # coursier install directory
 export PATH="$PATH:$HOME/.local/share/coursier/bin"
+
+# opencode
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # SDKMAN, must be at the end of the file
 export SDKMAN_DIR="$HOME/.sdkman"
