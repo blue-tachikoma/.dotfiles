@@ -1,6 +1,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   cmd = "Neotree",
+  lazy = false,
   branch = "v3.x",
   keys = {
     { "<F4>", "<Cmd>Neotree toggle<CR>", mode = "n", desc = "NeoTree" },
@@ -68,7 +69,9 @@ return {
           never_show_by_pattern = { -- uses glob style patterns
             --".null-ls_*",
           },
-        }
+        },
+        group_empty_dirs = true,
+        use_libuv_file_watcher = true
       }
     }
   end
