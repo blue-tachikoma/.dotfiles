@@ -8,10 +8,10 @@ return {
   lazy = false,
   config = function(_, opts)
     local cmp = require("cmp")
-    opts.sources = opts.sources or {
-        { name = "nvim_lsp" },
-        { name = "vsnip" },
-    }
+    opts.sources = vim.list_extend({
+      { name = "nvim_lsp" },
+      { name = "vsnip" },
+    }, opts.sources or {})
     opts.snippet = {
       expand = function(args)
         vim.fn["vsnip#anonymous"](args.body)
